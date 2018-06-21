@@ -48,7 +48,7 @@ class MW_EXT_Icon {
 	 * @return string
 	 * -------------------------------------------------------------------------------------------------------------- */
 
-	public static function onRenderTag( Parser $parser, PPFrame $frame, array $args ) {
+	public static function onRenderTag( Parser $parser, PPFrame $frame, $args = [] ) {
 		// Get options parser.
 		$getOptions = self::extractOptions( $args, $frame );
 
