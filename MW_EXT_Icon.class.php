@@ -1,9 +1,15 @@
 <?php
 
+namespace MediaWiki\Extension\MW_EXT_Icon;
+
+use OutputPage;
+use Parser;
+use PPFrame;
+use Skin;
+
 /**
  * Class MW_EXT_Icon
  * ------------------------------------------------------------------------------------------------------------------ */
-
 class MW_EXT_Icon {
 
 	/**
@@ -26,7 +32,7 @@ class MW_EXT_Icon {
 	 * @param Parser $parser
 	 *
 	 * @return bool
-	 * @throws MWException
+	 * @throws \MWException
 	 * -------------------------------------------------------------------------------------------------------------- */
 
 	public static function onParserFirstCallInit( Parser $parser ) {
@@ -116,7 +122,7 @@ class MW_EXT_Icon {
 	 * -------------------------------------------------------------------------------------------------------------- */
 
 	public static function onBeforePageDisplay( OutputPage $out, Skin $skin ) {
-		$out->addModuleStyles( array( 'ext.mw.fa.styles' ) );
+		$out->addModuleStyles( [ 'ext.mw.fa.styles' ] );
 
 		return true;
 	}
