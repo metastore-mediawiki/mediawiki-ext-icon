@@ -33,7 +33,7 @@
 		]
 	},
 	"ResourceModules": {
-		"ext.mw.fa.styles": {
+		"ext.mw.icon.styles": {
 			"styles": [
 				"styles/theme.css"
 			],
