@@ -56,7 +56,7 @@ class MW_EXT_Icon {
 		$outCustom = $getCustom;
 
 		// Out HTML.
-		$outHTML = '<span class="' . $outName . ' ' . $outCustom . ' mw-ext-fa" style="' . $outSize . $outColor . '"></span>';
+		$outHTML = '<span class="' . $outName . ' ' . $outCustom . ' mw-ext-fa navigation-not-searchable" style="' . $outSize . $outColor . '"></span>';
 
 		// Out parser.
 		$outParser = $outHTML;
