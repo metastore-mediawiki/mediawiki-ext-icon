@@ -20,7 +20,7 @@ class MW_EXT_Icon {
 	 * -------------------------------------------------------------------------------------------------------------- */
 
 	public static function onParserFirstCallInit( Parser $parser ) {
-		$parser->setFunctionHook( 'icon', __CLASS__ . '::onRenderTag', Parser::SFH_OBJECT_ARGS );
+		$parser->setFunctionHook( 'icon', [ __CLASS__, 'onRenderTag' ], Parser::SFH_OBJECT_ARGS );
 
 		return true;
 	}
