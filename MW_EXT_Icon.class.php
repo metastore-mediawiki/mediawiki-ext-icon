@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\MW_EXT_Icon;
 
 use OutputPage, Parser, PPFrame, Skin;
-use MediaWiki\Extension\MW_EXT_Core\MW_EXT_Core;
+use MediaWiki\Extension\MW_EXT_Kernel\MW_EXT_Kernel;
 
 /**
  * Class MW_EXT_Icon
@@ -35,22 +35,22 @@ class MW_EXT_Icon {
 	 */
 	public static function onRenderTag( Parser $parser, PPFrame $frame, $args = [] ) {
 		// Get options parser.
-		$getOption = MW_EXT_Core::extractOptions( $args, $frame );
+		$getOption = MW_EXT_Kernel::extractOptions( $args, $frame );
 
 		// Argument: name.
-		$getName = MW_EXT_Core::outClear( $getOption['name'] ?? '' ?: '' );
+		$getName = MW_EXT_Kernel::outClear( $getOption['name'] ?? '' ?: '' );
 		$outName = $getName;
 
 		// Argument: size.
-		$getSize = MW_EXT_Core::outClear( $getOption['size'] ?? '' ?: '' );
+		$getSize = MW_EXT_Kernel::outClear( $getOption['size'] ?? '' ?: '' );
 		$outSize = empty( $getSize ) ? '' : 'font-size:' . $getOption['size'] . 'em;';
 
 		// Argument: color.
-		$getColor = MW_EXT_Core::outClear( $getOption['color'] ?? '' ?: '' );
+		$getColor = MW_EXT_Kernel::outClear( $getOption['color'] ?? '' ?: '' );
 		$outColor = empty( $getColor ) ? '' : 'color:' . $getOption['color'] . ';';
 
 		// Argument: options.
-		$getCustom = MW_EXT_Core::outClear( $getOption['options'] ?? '' ?: '' );
+		$getCustom = MW_EXT_Kernel::outClear( $getOption['options'] ?? '' ?: '' );
 		$outCustom = $getCustom;
 
 		// Out HTML.
