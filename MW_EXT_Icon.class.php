@@ -26,13 +26,13 @@ class MW_EXT_Icon {
 	/**
 	 * Render tag function.
 	 *
-	 * @param array $args
 	 * @param Parser $parser
 	 * @param PPFrame $frame
+	 * @param array $args
 	 *
 	 * @return string
 	 */
-	public static function onRenderTag( array $args, Parser $parser, PPFrame $frame ) {
+	public static function onRenderTag( Parser $parser, PPFrame $frame, array $args ) {
 		// Get options parser.
 		$getOption = MW_EXT_Kernel::extractOptions( $args, $frame );
 
